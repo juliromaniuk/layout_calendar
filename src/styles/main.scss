@@ -16,6 +16,7 @@ body {
   gap: $gap;
   padding-left: $horizontal-padding;
   padding-right: $horizontal-padding;
+  box-sizing: border-box;
 
   /* prettier-ignore */
   width: calc(
@@ -25,11 +26,14 @@ body {
   &__day {
     width: $day-size;
     height: $day-size;
-    position: relative;
     background-color: $day-bg;
     border: $day-border;
 
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     font-family: $font-family;
 
     transition: all 0.5s ease;
@@ -37,10 +41,6 @@ body {
 
     &::before {
       font-size: $font-size;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
     }
 
     &:hover {
